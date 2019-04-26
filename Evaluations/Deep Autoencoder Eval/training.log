@@ -1,0 +1,772 @@
+nohup: ignoring input
+Namespace(aug_step=1, batch_size=128, constrained=False, drop_prob=0.8, gpu_ids='0', hidden_layers='512,512,1024', logdir='model_save', lr=0.005, noise_prob=0.0, non_linearity_type='selu', num_epochs=102, optimizer='momentum', path_to_eval_data='Netflix/NF_VALID', path_to_train_data='Netflix/NF_TRAIN', save_every=3, skip_last_layer_nl=False, summary_frequency=1000, weight_decay=0.0)
+GPU is not available.
+Loading training data
+Data loaded
+Total items found: 477412
+Vector dim: 17768
+Loading eval data
+/home/gani22sgr_gmail_com/DeepRecommender/reco_encoder/model/model.py:72: UserWarning: nn.init.xavier_uniform is now deprecated in favor of nn.init.xavier_uniform_.
+  weight_init.xavier_uniform(w)
+******************************
+******************************
+[17768, 512, 512, 1024]
+Dropout drop probability: 0.8
+Encoder pass:
+torch.Size([512, 17768])
+torch.Size([512])
+torch.Size([512, 512])
+torch.Size([512])
+torch.Size([1024, 512])
+torch.Size([1024])
+Decoder pass:
+torch.Size([512, 1024])
+torch.Size([512])
+torch.Size([512, 512])
+torch.Size([512])
+torch.Size([17768, 512])
+torch.Size([17768])
+******************************
+******************************
+######################################################
+######################################################
+############# AutoEncoder Model: #####################
+AutoEncoder(
+  (drop): Dropout(p=0.8)
+  (encode_w): ParameterList(
+      (0): Parameter containing: [torch.FloatTensor of size 512x17768]
+      (1): Parameter containing: [torch.FloatTensor of size 512x512]
+      (2): Parameter containing: [torch.FloatTensor of size 1024x512]
+  )
+  (encode_b): ParameterList(
+      (0): Parameter containing: [torch.FloatTensor of size 512]
+      (1): Parameter containing: [torch.FloatTensor of size 512]
+      (2): Parameter containing: [torch.FloatTensor of size 1024]
+  )
+  (decode_w): ParameterList(
+      (0): Parameter containing: [torch.FloatTensor of size 512x1024]
+      (1): Parameter containing: [torch.FloatTensor of size 512x512]
+      (2): Parameter containing: [torch.FloatTensor of size 17768x512]
+  )
+  (decode_b): ParameterList(
+      (0): Parameter containing: [torch.FloatTensor of size 512]
+      (1): Parameter containing: [torch.FloatTensor of size 512]
+      (2): Parameter containing: [torch.FloatTensor of size 17768]
+  )
+)
+######################################################
+######################################################
+Using GPUs: [0]
+Doing epoch 0 of 102
+[0,     0] RMSE: 3.9170912
+[0,  1000] RMSE: 1.1595540
+[0,  2000] RMSE: 0.9722964
+[0,  3000] RMSE: 0.9539161
+Total epoch 0 finished in 998.7111830711365 seconds with TRAINING RMSE loss: 1.0188187622284754
+Epoch 0 EVALUATION LOSS: 0.9668342443494847
+Saving model to model_save/model.epoch_0
+Doing epoch 1 of 102
+[1,     0] RMSE: 0.9488640
+[1,  1000] RMSE: 0.9375428
+[1,  2000] RMSE: 0.9320544
+[1,  3000] RMSE: 0.9288558
+Total epoch 1 finished in 978.9138414859772 seconds with TRAINING RMSE loss: 0.9308632586688402
+Doing epoch 2 of 102
+[2,     0] RMSE: 0.9227336
+[2,  1000] RMSE: 0.9201606
+[2,  2000] RMSE: 0.9158013
+[2,  3000] RMSE: 0.9114078
+Total epoch 2 finished in 977.8137919902802 seconds with TRAINING RMSE loss: 0.9148878400224683
+Doing epoch 3 of 102
+[3,     0] RMSE: 0.9110513
+[3,  1000] RMSE: 0.9061826
+[3,  2000] RMSE: 0.9052720
+[3,  3000] RMSE: 0.9030568
+Total epoch 3 finished in 977.0489046573639 seconds with TRAINING RMSE loss: 0.9043986425147695
+Epoch 3 EVALUATION LOSS: 0.9410664108230508
+Saving model to model_save/model.epoch_3
+Doing epoch 4 of 102
+[4,     0] RMSE: 0.9025905
+[4,  1000] RMSE: 0.8978794
+[4,  2000] RMSE: 0.8973575
+[4,  3000] RMSE: 0.8946811
+Total epoch 4 finished in 985.6783635616302 seconds with TRAINING RMSE loss: 0.8963997495826341
+Doing epoch 5 of 102
+[5,     0] RMSE: 0.8955035
+[5,  1000] RMSE: 0.8911556
+[5,  2000] RMSE: 0.8909701
+[5,  3000] RMSE: 0.8897891
+Total epoch 5 finished in 980.8102693557739 seconds with TRAINING RMSE loss: 0.8901286043827005
+Doing epoch 6 of 102
+[6,     0] RMSE: 0.8879383
+[6,  1000] RMSE: 0.8847632
+[6,  2000] RMSE: 0.8856771
+[6,  3000] RMSE: 0.8827897
+Total epoch 6 finished in 981.1609246730804 seconds with TRAINING RMSE loss: 0.8839741763866495
+Epoch 6 EVALUATION LOSS: 0.9320598944567273
+Saving model to model_save/model.epoch_6
+Doing epoch 7 of 102
+[7,     0] RMSE: 0.8821547
+[7,  1000] RMSE: 0.8787007
+[7,  2000] RMSE: 0.8799172
+[7,  3000] RMSE: 0.8781277
+Total epoch 7 finished in 982.9990644454956 seconds with TRAINING RMSE loss: 0.8789840295916774
+Doing epoch 8 of 102
+[8,     0] RMSE: 0.8792727
+[8,  1000] RMSE: 0.8757727
+[8,  2000] RMSE: 0.8741426
+[8,  3000] RMSE: 0.8737182
+Total epoch 8 finished in 981.4047842025757 seconds with TRAINING RMSE loss: 0.8745797352156559
+Doing epoch 9 of 102
+[9,     0] RMSE: 0.8747368
+[9,  1000] RMSE: 0.8726216
+[9,  2000] RMSE: 0.8713187
+[9,  3000] RMSE: 0.8707458
+Total epoch 9 finished in 981.8202226161957 seconds with TRAINING RMSE loss: 0.8712270453203879
+Epoch 9 EVALUATION LOSS: 0.9270137119503262
+Saving model to model_save/model.epoch_9
+Doing epoch 10 of 102
+[10,     0] RMSE: 0.8697782
+[10,  1000] RMSE: 0.8677445
+[10,  2000] RMSE: 0.8673406
+[10,  3000] RMSE: 0.8677433
+Total epoch 10 finished in 1000.5306775569916 seconds with TRAINING RMSE loss: 0.867862252649485
+Doing epoch 11 of 102
+[11,     0] RMSE: 0.8689253
+[11,  1000] RMSE: 0.8659027
+[11,  2000] RMSE: 0.8655822
+[11,  3000] RMSE: 0.8653097
+Total epoch 11 finished in 993.79896068573 seconds with TRAINING RMSE loss: 0.8654278313453312
+Doing epoch 12 of 102
+[12,     0] RMSE: 0.8647235
+[12,  1000] RMSE: 0.8624892
+[12,  2000] RMSE: 0.8630731
+[12,  3000] RMSE: 0.8618464
+Total epoch 12 finished in 993.5921547412872 seconds with TRAINING RMSE loss: 0.8628146197785478
+Epoch 12 EVALUATION LOSS: 0.9210944401951625
+Saving model to model_save/model.epoch_12
+Doing epoch 13 of 102
+[13,     0] RMSE: 0.8642515
+[13,  1000] RMSE: 0.8599001
+[13,  2000] RMSE: 0.8600879
+[13,  3000] RMSE: 0.8607691
+Total epoch 13 finished in 995.8153507709503 seconds with TRAINING RMSE loss: 0.8604120821652457
+Doing epoch 14 of 102
+[14,     0] RMSE: 0.8611270
+[14,  1000] RMSE: 0.8577100
+[14,  2000] RMSE: 0.8587097
+[14,  3000] RMSE: 0.8586978
+Total epoch 14 finished in 983.6339592933655 seconds with TRAINING RMSE loss: 0.8584086708737455
+Doing epoch 15 of 102
+[15,     0] RMSE: 0.8585254
+[15,  1000] RMSE: 0.8577976
+[15,  2000] RMSE: 0.8558161
+[15,  3000] RMSE: 0.8565845
+Total epoch 15 finished in 984.085940361023 seconds with TRAINING RMSE loss: 0.8565634681379672
+Epoch 15 EVALUATION LOSS: 0.9173434318216043
+Saving model to model_save/model.epoch_15
+Doing epoch 16 of 102
+[16,     0] RMSE: 0.8558305
+[16,  1000] RMSE: 0.8546868
+[16,  2000] RMSE: 0.8546603
+[16,  3000] RMSE: 0.8550833
+Total epoch 16 finished in 993.5849921703339 seconds with TRAINING RMSE loss: 0.8547150272675772
+Doing epoch 17 of 102
+[17,     0] RMSE: 0.8543504
+[17,  1000] RMSE: 0.8522667
+[17,  2000] RMSE: 0.8533501
+[17,  3000] RMSE: 0.8531004
+Total epoch 17 finished in 994.662513256073 seconds with TRAINING RMSE loss: 0.8531191971334576
+Doing epoch 18 of 102
+[18,     0] RMSE: 0.8539741
+[18,  1000] RMSE: 0.8523298
+[18,  2000] RMSE: 0.8512757
+[18,  3000] RMSE: 0.8511197
+Total epoch 18 finished in 991.953535079956 seconds with TRAINING RMSE loss: 0.8516603269158733
+Epoch 18 EVALUATION LOSS: 0.9159140241652792
+Saving model to model_save/model.epoch_18
+Doing epoch 19 of 102
+[19,     0] RMSE: 0.8519296
+[19,  1000] RMSE: 0.8495340
+[19,  2000] RMSE: 0.8508285
+[19,  3000] RMSE: 0.8504154
+Total epoch 19 finished in 988.5513701438904 seconds with TRAINING RMSE loss: 0.8502053692792918
+Doing epoch 20 of 102
+[20,     0] RMSE: 0.8500334
+[20,  1000] RMSE: 0.8493949
+[20,  2000] RMSE: 0.8483140
+[20,  3000] RMSE: 0.8484150
+Total epoch 20 finished in 985.276374578476 seconds with TRAINING RMSE loss: 0.8488924832524674
+Doing epoch 21 of 102
+[21,     0] RMSE: 0.8496378
+[21,  1000] RMSE: 0.8469426
+[21,  2000] RMSE: 0.8472219
+[21,  3000] RMSE: 0.8486698
+Total epoch 21 finished in 985.4715266227722 seconds with TRAINING RMSE loss: 0.8475060628422161
+Epoch 21 EVALUATION LOSS: 0.9171355547081252
+Saving model to model_save/model.epoch_21
+Doing epoch 22 of 102
+[22,     0] RMSE: 0.8471454
+[22,  1000] RMSE: 0.8463698
+[22,  2000] RMSE: 0.8459823
+[22,  3000] RMSE: 0.8471453
+Total epoch 22 finished in 997.9877648353577 seconds with TRAINING RMSE loss: 0.8462816551873411
+Doing epoch 23 of 102
+[23,     0] RMSE: 0.8452892
+[23,  1000] RMSE: 0.8444773
+[23,  2000] RMSE: 0.8461859
+[23,  3000] RMSE: 0.8448356
+Total epoch 23 finished in 1002.2681586742401 seconds with TRAINING RMSE loss: 0.8451719221045562
+Doing epoch 24 of 102
+[24,     0] RMSE: 0.8452539
+[24,  1000] RMSE: 0.8418289
+[24,  2000] RMSE: 0.8422757
+[24,  3000] RMSE: 0.8417812
+Total epoch 24 finished in 997.4410963058472 seconds with TRAINING RMSE loss: 0.8416160053776931
+Epoch 24 EVALUATION LOSS: 0.9141347828920685
+Saving model to model_save/model.epoch_24
+Doing epoch 25 of 102
+[25,     0] RMSE: 0.8401824
+[25,  1000] RMSE: 0.8398380
+[25,  2000] RMSE: 0.8414635
+[25,  3000] RMSE: 0.8418803
+Total epoch 25 finished in 1000.7251179218292 seconds with TRAINING RMSE loss: 0.8407879732174085
+Doing epoch 26 of 102
+[26,     0] RMSE: 0.8396642
+[26,  1000] RMSE: 0.8395579
+[26,  2000] RMSE: 0.8417982
+[26,  3000] RMSE: 0.8398472
+Total epoch 26 finished in 990.4353137016296 seconds with TRAINING RMSE loss: 0.8403682856575054
+Doing epoch 27 of 102
+[27,     0] RMSE: 0.8402005
+[27,  1000] RMSE: 0.8397145
+[27,  2000] RMSE: 0.8403772
+[27,  3000] RMSE: 0.8388883
+Total epoch 27 finished in 984.2223227024078 seconds with TRAINING RMSE loss: 0.8397800881555634
+Epoch 27 EVALUATION LOSS: 0.9120009969310106
+Saving model to model_save/model.epoch_27
+Doing epoch 28 of 102
+[28,     0] RMSE: 0.8402757
+[28,  1000] RMSE: 0.8397144
+[28,  2000] RMSE: 0.8396765
+[28,  3000] RMSE: 0.8386381
+Total epoch 28 finished in 990.5137627124786 seconds with TRAINING RMSE loss: 0.8392668469114098
+Doing epoch 29 of 102
+[29,     0] RMSE: 0.8390176
+[29,  1000] RMSE: 0.8374842
+[29,  2000] RMSE: 0.8391429
+[29,  3000] RMSE: 0.8395964
+Total epoch 29 finished in 992.8602449893951 seconds with TRAINING RMSE loss: 0.8387808414718554
+Doing epoch 30 of 102
+[30,     0] RMSE: 0.8389305
+[30,  1000] RMSE: 0.8374938
+[30,  2000] RMSE: 0.8387227
+[30,  3000] RMSE: 0.8389124
+Total epoch 30 finished in 991.3910548686981 seconds with TRAINING RMSE loss: 0.8384450749166765
+Epoch 30 EVALUATION LOSS: 0.9137973518622763
+Saving model to model_save/model.epoch_30
+Doing epoch 31 of 102
+[31,     0] RMSE: 0.8386847
+[31,  1000] RMSE: 0.8394021
+[31,  2000] RMSE: 0.8368954
+[31,  3000] RMSE: 0.8375172
+Total epoch 31 finished in 998.8568344116211 seconds with TRAINING RMSE loss: 0.8379067484322767
+Doing epoch 32 of 102
+[32,     0] RMSE: 0.8377626
+[32,  1000] RMSE: 0.8375297
+[32,  2000] RMSE: 0.8371995
+[32,  3000] RMSE: 0.8381380
+Total epoch 32 finished in 1002.1737079620361 seconds with TRAINING RMSE loss: 0.8375225053278121
+Doing epoch 33 of 102
+[33,     0] RMSE: 0.8371091
+[33,  1000] RMSE: 0.8365180
+[33,  2000] RMSE: 0.8377869
+[33,  3000] RMSE: 0.8363935
+Total epoch 33 finished in 996.4073629379272 seconds with TRAINING RMSE loss: 0.8371801709547436
+Epoch 33 EVALUATION LOSS: 0.9111451043948033
+Saving model to model_save/model.epoch_33
+Doing epoch 34 of 102
+[34,     0] RMSE: 0.8383038
+[34,  1000] RMSE: 0.8367511
+[34,  2000] RMSE: 0.8370319
+[34,  3000] RMSE: 0.8365496
+Total epoch 34 finished in 1009.1705119609833 seconds with TRAINING RMSE loss: 0.8366734756979195
+Doing epoch 35 of 102
+[35,     0] RMSE: 0.8363063
+[35,  1000] RMSE: 0.8371609
+[35,  2000] RMSE: 0.8360925
+[35,  3000] RMSE: 0.8348155
+Total epoch 35 finished in 993.0418028831482 seconds with TRAINING RMSE loss: 0.8363879001913275
+Doing epoch 36 of 102
+[36,     0] RMSE: 0.8378771
+[36,  1000] RMSE: 0.8353191
+[36,  2000] RMSE: 0.8349670
+[36,  3000] RMSE: 0.8356686
+Total epoch 36 finished in 999.7192807197571 seconds with TRAINING RMSE loss: 0.8349091813504449
+Epoch 36 EVALUATION LOSS: 0.9125320007315827
+Saving model to model_save/model.epoch_36
+Doing epoch 37 of 102
+[37,     0] RMSE: 0.8333071
+[37,  1000] RMSE: 0.8351107
+[37,  2000] RMSE: 0.8330222
+[37,  3000] RMSE: 0.8343674
+Total epoch 37 finished in 989.6633327007294 seconds with TRAINING RMSE loss: 0.8345487568422293
+Doing epoch 38 of 102
+[38,     0] RMSE: 0.8359873
+[38,  1000] RMSE: 0.8335156
+[38,  2000] RMSE: 0.8343923
+[38,  3000] RMSE: 0.8356214
+Total epoch 38 finished in 985.163503408432 seconds with TRAINING RMSE loss: 0.8343811747417005
+Doing epoch 39 of 102
+[39,     0] RMSE: 0.8338280
+[39,  1000] RMSE: 0.8335902
+[39,  2000] RMSE: 0.8345728
+[39,  3000] RMSE: 0.8338610
+Total epoch 39 finished in 988.9133784770966 seconds with TRAINING RMSE loss: 0.8341665175002008
+Epoch 39 EVALUATION LOSS: 0.912119932633362
+Saving model to model_save/model.epoch_39
+Doing epoch 40 of 102
+[40,     0] RMSE: 0.8349180
+[40,  1000] RMSE: 0.8342159
+[40,  2000] RMSE: 0.8334980
+[40,  3000] RMSE: 0.8340456
+Total epoch 40 finished in 992.6119368076324 seconds with TRAINING RMSE loss: 0.8337983218344425
+Doing epoch 41 of 102
+[41,     0] RMSE: 0.8332404
+[41,  1000] RMSE: 0.8339558
+[41,  2000] RMSE: 0.8339931
+[41,  3000] RMSE: 0.8331162
+Total epoch 41 finished in 998.2056815624237 seconds with TRAINING RMSE loss: 0.8338906059650277
+Doing epoch 42 of 102
+[42,     0] RMSE: 0.8346949
+[42,  1000] RMSE: 0.8344379
+[42,  2000] RMSE: 0.8324824
+[42,  3000] RMSE: 0.8345631
+Total epoch 42 finished in 992.5883877277374 seconds with TRAINING RMSE loss: 0.8335970229542672
+Epoch 42 EVALUATION LOSS: 0.9117688704219227
+Saving model to model_save/model.epoch_42
+Doing epoch 43 of 102
+[43,     0] RMSE: 0.8326651
+[43,  1000] RMSE: 0.8336491
+[43,  2000] RMSE: 0.8323875
+[43,  3000] RMSE: 0.8333528
+Total epoch 43 finished in 989.1476664543152 seconds with TRAINING RMSE loss: 0.833379283868549
+Doing epoch 44 of 102
+[44,     0] RMSE: 0.8343964
+[44,  1000] RMSE: 0.8337739
+[44,  2000] RMSE: 0.8335215
+[44,  3000] RMSE: 0.8343652
+Total epoch 44 finished in 982.030081987381 seconds with TRAINING RMSE loss: 0.8332540353260506
+Doing epoch 45 of 102
+[45,     0] RMSE: 0.8306589
+[45,  1000] RMSE: 0.8319850
+[45,  2000] RMSE: 0.8335480
+[45,  3000] RMSE: 0.8332962
+Total epoch 45 finished in 984.7624087333679 seconds with TRAINING RMSE loss: 0.8329649450890048
+Epoch 45 EVALUATION LOSS: 0.913428163202337
+Saving model to model_save/model.epoch_45
+Doing epoch 46 of 102
+[46,     0] RMSE: 0.8330395
+[46,  1000] RMSE: 0.8315959
+[46,  2000] RMSE: 0.8336802
+[46,  3000] RMSE: 0.8331064
+Total epoch 46 finished in 994.8403956890106 seconds with TRAINING RMSE loss: 0.8328781190477009
+Doing epoch 47 of 102
+[47,     0] RMSE: 0.8331936
+[47,  1000] RMSE: 0.8331238
+[47,  2000] RMSE: 0.8329606
+[47,  3000] RMSE: 0.8313855
+Total epoch 47 finished in 993.4933412075043 seconds with TRAINING RMSE loss: 0.8327224916986136
+Doing epoch 48 of 102
+[48,     0] RMSE: 0.8337364
+[48,  1000] RMSE: 0.8326823
+[48,  2000] RMSE: 0.8323762
+[48,  3000] RMSE: 0.8321193
+Total epoch 48 finished in 993.6551289558411 seconds with TRAINING RMSE loss: 0.8320385668871978
+Epoch 48 EVALUATION LOSS: 0.9104634856793348
+Saving model to model_save/model.epoch_48
+Doing epoch 49 of 102
+[49,     0] RMSE: 0.8305207
+[49,  1000] RMSE: 0.8308850
+[49,  2000] RMSE: 0.8323633
+[49,  3000] RMSE: 0.8327333
+Total epoch 49 finished in 992.7084136009216 seconds with TRAINING RMSE loss: 0.8318755317960206
+Doing epoch 50 of 102
+[50,     0] RMSE: 0.8314699
+[50,  1000] RMSE: 0.8302965
+[50,  2000] RMSE: 0.8318621
+[50,  3000] RMSE: 0.8317097
+Total epoch 50 finished in 987.7640748023987 seconds with TRAINING RMSE loss: 0.8317619125057626
+Doing epoch 51 of 102
+[51,     0] RMSE: 0.8336463
+[51,  1000] RMSE: 0.8315962
+[51,  2000] RMSE: 0.8312222
+[51,  3000] RMSE: 0.8314628
+Total epoch 51 finished in 989.2155432701111 seconds with TRAINING RMSE loss: 0.831730085473472
+Epoch 51 EVALUATION LOSS: 0.9115731948637288
+Saving model to model_save/model.epoch_51
+Doing epoch 52 of 102
+[52,     0] RMSE: 0.8330334
+[52,  1000] RMSE: 0.8299588
+[52,  2000] RMSE: 0.8314890
+[52,  3000] RMSE: 0.8323807
+Total epoch 52 finished in 986.0889930725098 seconds with TRAINING RMSE loss: 0.8315414691673891
+Doing epoch 53 of 102
+[53,     0] RMSE: 0.8325807
+[53,  1000] RMSE: 0.8315951
+[53,  2000] RMSE: 0.8314807
+[53,  3000] RMSE: 0.8322953
+Total epoch 53 finished in 991.6285789012909 seconds with TRAINING RMSE loss: 0.8315033822206067
+Doing epoch 54 of 102
+[54,     0] RMSE: 0.8303222
+[54,  1000] RMSE: 0.8314705
+[54,  2000] RMSE: 0.8311298
+[54,  3000] RMSE: 0.8320468
+Total epoch 54 finished in 990.8307859897614 seconds with TRAINING RMSE loss: 0.8313607713492821
+Epoch 54 EVALUATION LOSS: 0.9123575367130793
+Saving model to model_save/model.epoch_54
+Doing epoch 55 of 102
+[55,     0] RMSE: 0.8305728
+[55,  1000] RMSE: 0.8321567
+[55,  2000] RMSE: 0.8315903
+[55,  3000] RMSE: 0.8298370
+Total epoch 55 finished in 989.0071136951447 seconds with TRAINING RMSE loss: 0.8313478762597097
+Doing epoch 56 of 102
+[56,     0] RMSE: 0.8320041
+[56,  1000] RMSE: 0.8308733
+[56,  2000] RMSE: 0.8303954
+[56,  3000] RMSE: 0.8312805
+Total epoch 56 finished in 985.4630863666534 seconds with TRAINING RMSE loss: 0.8311594146258968
+Doing epoch 57 of 102
+[57,     0] RMSE: 0.8324091
+[57,  1000] RMSE: 0.8303684
+[57,  2000] RMSE: 0.8320260
+[57,  3000] RMSE: 0.8311057
+Total epoch 57 finished in 986.6598913669586 seconds with TRAINING RMSE loss: 0.8310975553357237
+Epoch 57 EVALUATION LOSS: 0.9122866173471746
+Saving model to model_save/model.epoch_57
+Doing epoch 58 of 102
+[58,     0] RMSE: 0.8308834
+[58,  1000] RMSE: 0.8307553
+[58,  2000] RMSE: 0.8305340
+[58,  3000] RMSE: 0.8313452
+Total epoch 58 finished in 995.7090585231781 seconds with TRAINING RMSE loss: 0.8310639179183948
+Doing epoch 59 of 102
+[59,     0] RMSE: 0.8317785
+[59,  1000] RMSE: 0.8302796
+[59,  2000] RMSE: 0.8307137
+[59,  3000] RMSE: 0.8315318
+Total epoch 59 finished in 994.0742375850677 seconds with TRAINING RMSE loss: 0.8308691717945376
+Doing epoch 60 of 102
+[60,     0] RMSE: 0.8309506
+[60,  1000] RMSE: 0.8318765
+[60,  2000] RMSE: 0.8293767
+[60,  3000] RMSE: 0.8325173
+Total epoch 60 finished in 988.8983337879181 seconds with TRAINING RMSE loss: 0.8309125453083744
+Epoch 60 EVALUATION LOSS: 0.9119575138263615
+Saving model to model_save/model.epoch_60
+Doing epoch 61 of 102
+[61,     0] RMSE: 0.8295358
+[61,  1000] RMSE: 0.8318097
+[61,  2000] RMSE: 0.8295207
+[61,  3000] RMSE: 0.8306743
+Total epoch 61 finished in 997.7273676395416 seconds with TRAINING RMSE loss: 0.8307999846531023
+Doing epoch 62 of 102
+[62,     0] RMSE: 0.8313056
+[62,  1000] RMSE: 0.8307720
+[62,  2000] RMSE: 0.8303696
+[62,  3000] RMSE: 0.8309330
+Total epoch 62 finished in 990.2980949878693 seconds with TRAINING RMSE loss: 0.8307601183582736
+Doing epoch 63 of 102
+[63,     0] RMSE: 0.8310406
+[63,  1000] RMSE: 0.8304955
+[63,  2000] RMSE: 0.8302029
+[63,  3000] RMSE: 0.8301497
+Total epoch 63 finished in 991.9975006580353 seconds with TRAINING RMSE loss: 0.8305985211653754
+Epoch 63 EVALUATION LOSS: 0.9110814561470181
+Saving model to model_save/model.epoch_63
+Doing epoch 64 of 102
+[64,     0] RMSE: 0.8318866
+[64,  1000] RMSE: 0.8300408
+[64,  2000] RMSE: 0.8308915
+[64,  3000] RMSE: 0.8303674
+Total epoch 64 finished in 995.9564888477325 seconds with TRAINING RMSE loss: 0.830523349738276
+Doing epoch 65 of 102
+[65,     0] RMSE: 0.8308990
+[65,  1000] RMSE: 0.8307467
+[65,  2000] RMSE: 0.8302142
+[65,  3000] RMSE: 0.8310780
+Total epoch 65 finished in 990.615734577179 seconds with TRAINING RMSE loss: 0.8305284284861806
+Doing epoch 66 of 102
+[66,     0] RMSE: 0.8299108
+[66,  1000] RMSE: 0.8303517
+[66,  2000] RMSE: 0.8303726
+[66,  3000] RMSE: 0.8291023
+Total epoch 66 finished in 992.8292284011841 seconds with TRAINING RMSE loss: 0.8300170281323764
+Epoch 66 EVALUATION LOSS: 0.9113609844539993
+Saving model to model_save/model.epoch_66
+Doing epoch 67 of 102
+[67,     0] RMSE: 0.8303291
+[67,  1000] RMSE: 0.8303754
+[67,  2000] RMSE: 0.8295724
+[67,  3000] RMSE: 0.8294742
+Total epoch 67 finished in 998.4434478282928 seconds with TRAINING RMSE loss: 0.8299832877813393
+Doing epoch 68 of 102
+[68,     0] RMSE: 0.8307178
+[68,  1000] RMSE: 0.8292395
+[68,  2000] RMSE: 0.8310568
+[68,  3000] RMSE: 0.8299641
+Total epoch 68 finished in 992.2803568840027 seconds with TRAINING RMSE loss: 0.8299765336014463
+Doing epoch 69 of 102
+[69,     0] RMSE: 0.8295116
+[69,  1000] RMSE: 0.8298036
+[69,  2000] RMSE: 0.8300788
+[69,  3000] RMSE: 0.8302783
+Total epoch 69 finished in 985.9696309566498 seconds with TRAINING RMSE loss: 0.8299596525574424
+Epoch 69 EVALUATION LOSS: 0.9113764046830368
+Saving model to model_save/model.epoch_69
+Doing epoch 70 of 102
+[70,     0] RMSE: 0.8295933
+[70,  1000] RMSE: 0.8293121
+[70,  2000] RMSE: 0.8298186
+[70,  3000] RMSE: 0.8301201
+Total epoch 70 finished in 997.7516324520111 seconds with TRAINING RMSE loss: 0.8298652474718269
+Doing epoch 71 of 102
+[71,     0] RMSE: 0.8303156
+[71,  1000] RMSE: 0.8298948
+[71,  2000] RMSE: 0.8297541
+[71,  3000] RMSE: 0.8292475
+Total epoch 71 finished in 986.6611483097076 seconds with TRAINING RMSE loss: 0.8298745133758728
+Doing epoch 72 of 102
+[72,     0] RMSE: 0.8309537
+[72,  1000] RMSE: 0.8295046
+[72,  2000] RMSE: 0.8303867
+[72,  3000] RMSE: 0.8301961
+Total epoch 72 finished in 993.3598759174347 seconds with TRAINING RMSE loss: 0.8298220189167872
+Epoch 72 EVALUATION LOSS: 0.9115522444958957
+Saving model to model_save/model.epoch_72
+Doing epoch 73 of 102
+[73,     0] RMSE: 0.8288784
+[73,  1000] RMSE: 0.8295681
+[73,  2000] RMSE: 0.8300581
+[73,  3000] RMSE: 0.8290209
+Total epoch 73 finished in 988.3066973686218 seconds with TRAINING RMSE loss: 0.8295247331978554
+Doing epoch 74 of 102
+[74,     0] RMSE: 0.8294078
+[74,  1000] RMSE: 0.8292133
+[74,  2000] RMSE: 0.8300180
+[74,  3000] RMSE: 0.8300751
+Total epoch 74 finished in 987.4086678028107 seconds with TRAINING RMSE loss: 0.8295700529502289
+Doing epoch 75 of 102
+[75,     0] RMSE: 0.8287620
+[75,  1000] RMSE: 0.8281973
+[75,  2000] RMSE: 0.8307772
+[75,  3000] RMSE: 0.8301578
+Total epoch 75 finished in 996.0182437896729 seconds with TRAINING RMSE loss: 0.829687531313245
+Epoch 75 EVALUATION LOSS: 0.9116974305812902
+Saving model to model_save/model.epoch_75
+Doing epoch 76 of 102
+[76,     0] RMSE: 0.8296124
+[76,  1000] RMSE: 0.8292225
+[76,  2000] RMSE: 0.8299458
+[76,  3000] RMSE: 0.8290166
+Total epoch 76 finished in 983.7880983352661 seconds with TRAINING RMSE loss: 0.8294963294193968
+Doing epoch 77 of 102
+[77,     0] RMSE: 0.8298746
+[77,  1000] RMSE: 0.8288329
+[77,  2000] RMSE: 0.8305387
+[77,  3000] RMSE: 0.8286394
+Total epoch 77 finished in 984.5885155200958 seconds with TRAINING RMSE loss: 0.8294508570908679
+Doing epoch 78 of 102
+[78,     0] RMSE: 0.8299565
+[78,  1000] RMSE: 0.8276387
+[78,  2000] RMSE: 0.8298975
+[78,  3000] RMSE: 0.8305722
+Total epoch 78 finished in 979.4596586227417 seconds with TRAINING RMSE loss: 0.8296015372289385
+Epoch 78 EVALUATION LOSS: 0.9124092467329322
+Saving model to model_save/model.epoch_78
+Doing epoch 79 of 102
+[79,     0] RMSE: 0.8305626
+[79,  1000] RMSE: 0.8288531
+[79,  2000] RMSE: 0.8301430
+[79,  3000] RMSE: 0.8296301
+Total epoch 79 finished in 992.7617449760437 seconds with TRAINING RMSE loss: 0.829469959299509
+Doing epoch 80 of 102
+[80,     0] RMSE: 0.8291278
+[80,  1000] RMSE: 0.8298455
+[80,  2000] RMSE: 0.8302332
+[80,  3000] RMSE: 0.8284994
+Total epoch 80 finished in 991.1870546340942 seconds with TRAINING RMSE loss: 0.829521728120291
+Doing epoch 81 of 102
+[81,     0] RMSE: 0.8295108
+[81,  1000] RMSE: 0.8298062
+[81,  2000] RMSE: 0.8281310
+[81,  3000] RMSE: 0.8299868
+Total epoch 81 finished in 989.1113216876984 seconds with TRAINING RMSE loss: 0.8294204312880531
+Epoch 81 EVALUATION LOSS: 0.9121517646200309
+Saving model to model_save/model.epoch_81
+Doing epoch 82 of 102
+[82,     0] RMSE: 0.8299041
+[82,  1000] RMSE: 0.8295027
+[82,  2000] RMSE: 0.8293978
+[82,  3000] RMSE: 0.8291222
+Total epoch 82 finished in 993.3017530441284 seconds with TRAINING RMSE loss: 0.8295273551217388
+Doing epoch 83 of 102
+[83,     0] RMSE: 0.8302801
+[83,  1000] RMSE: 0.8291587
+[83,  2000] RMSE: 0.8289952
+[83,  3000] RMSE: 0.8294506
+Total epoch 83 finished in 995.1522700786591 seconds with TRAINING RMSE loss: 0.829390821245326
+Doing epoch 84 of 102
+[84,     0] RMSE: 0.8301445
+[84,  1000] RMSE: 0.8290063
+[84,  2000] RMSE: 0.8287378
+[84,  3000] RMSE: 0.8296266
+Total epoch 84 finished in 992.2180259227753 seconds with TRAINING RMSE loss: 0.8293856516683211
+Epoch 84 EVALUATION LOSS: 0.9119108954692045
+Saving model to model_save/model.epoch_84
+Doing epoch 85 of 102
+[85,     0] RMSE: 0.8305071
+[85,  1000] RMSE: 0.8301186
+[85,  2000] RMSE: 0.8289055
+[85,  3000] RMSE: 0.8285465
+Total epoch 85 finished in 983.1841793060303 seconds with TRAINING RMSE loss: 0.8294765660065503
+Doing epoch 86 of 102
+[86,     0] RMSE: 0.8306618
+[86,  1000] RMSE: 0.8296103
+[86,  2000] RMSE: 0.8290348
+[86,  3000] RMSE: 0.8291830
+Total epoch 86 finished in 986.1078763008118 seconds with TRAINING RMSE loss: 0.8293504300958082
+Doing epoch 87 of 102
+[87,     0] RMSE: 0.8296361
+[87,  1000] RMSE: 0.8292670
+[87,  2000] RMSE: 0.8289264
+[87,  3000] RMSE: 0.8296970
+Total epoch 87 finished in 994.1595151424408 seconds with TRAINING RMSE loss: 0.8294550111262565
+Epoch 87 EVALUATION LOSS: 0.9118012051479163
+Saving model to model_save/model.epoch_87
+Doing epoch 88 of 102
+[88,     0] RMSE: 0.8300784
+[88,  1000] RMSE: 0.8292642
+[88,  2000] RMSE: 0.8293771
+[88,  3000] RMSE: 0.8302084
+Total epoch 88 finished in 993.5081324577332 seconds with TRAINING RMSE loss: 0.8294021142868926
+Doing epoch 89 of 102
+[89,     0] RMSE: 0.8285283
+[89,  1000] RMSE: 0.8296824
+[89,  2000] RMSE: 0.8282589
+[89,  3000] RMSE: 0.8294882
+Total epoch 89 finished in 994.0023365020752 seconds with TRAINING RMSE loss: 0.8293575019947509
+Doing epoch 90 of 102
+[90,     0] RMSE: 0.8302524
+[90,  1000] RMSE: 0.8295418
+[90,  2000] RMSE: 0.8286537
+[90,  3000] RMSE: 0.8291916
+Total epoch 90 finished in 998.7726104259491 seconds with TRAINING RMSE loss: 0.8292445469934671
+Epoch 90 EVALUATION LOSS: 0.9116429380979673
+Saving model to model_save/model.epoch_90
+Doing epoch 91 of 102
+[91,     0] RMSE: 0.8297891
+[91,  1000] RMSE: 0.8283428
+[91,  2000] RMSE: 0.8304384
+[91,  3000] RMSE: 0.8287731
+Total epoch 91 finished in 1008.8763165473938 seconds with TRAINING RMSE loss: 0.829217842801861
+Doing epoch 92 of 102
+[92,     0] RMSE: 0.8292954
+[92,  1000] RMSE: 0.8284537
+[92,  2000] RMSE: 0.8286514
+[92,  3000] RMSE: 0.8294979
+Total epoch 92 finished in 1008.2812569141388 seconds with TRAINING RMSE loss: 0.8292164465944947
+Doing epoch 93 of 102
+[93,     0] RMSE: 0.8306239
+[93,  1000] RMSE: 0.8293345
+[93,  2000] RMSE: 0.8291896
+[93,  3000] RMSE: 0.8280173
+Total epoch 93 finished in 1007.5727875232697 seconds with TRAINING RMSE loss: 0.8292022252195788
+Epoch 93 EVALUATION LOSS: 0.9115835477505321
+Saving model to model_save/model.epoch_93
+Doing epoch 94 of 102
+[94,     0] RMSE: 0.8306642
+[94,  1000] RMSE: 0.8300697
+[94,  2000] RMSE: 0.8281080
+[94,  3000] RMSE: 0.8295489
+Total epoch 94 finished in 1001.0094425678253 seconds with TRAINING RMSE loss: 0.8291821375757767
+Doing epoch 95 of 102
+[95,     0] RMSE: 0.8289563
+[95,  1000] RMSE: 0.8297939
+[95,  2000] RMSE: 0.8284678
+[95,  3000] RMSE: 0.8288930
+Total epoch 95 finished in 1003.8153383731842 seconds with TRAINING RMSE loss: 0.8291641513628583
+Doing epoch 96 of 102
+[96,     0] RMSE: 0.8296334
+[96,  1000] RMSE: 0.8297279
+[96,  2000] RMSE: 0.8281002
+[96,  3000] RMSE: 0.8302318
+Total epoch 96 finished in 1008.1153340339661 seconds with TRAINING RMSE loss: 0.829154305130927
+Epoch 96 EVALUATION LOSS: 0.9115771908489099
+Saving model to model_save/model.epoch_96
+Doing epoch 97 of 102
+[97,     0] RMSE: 0.8282898
+[97,  1000] RMSE: 0.8296761
+[97,  2000] RMSE: 0.8277244
+[97,  3000] RMSE: 0.8306024
+Total epoch 97 finished in 1009.1249480247498 seconds with TRAINING RMSE loss: 0.8292260171467177
+Doing epoch 98 of 102
+[98,     0] RMSE: 0.8287989
+[98,  1000] RMSE: 0.8300959
+[98,  2000] RMSE: 0.8272869
+[98,  3000] RMSE: 0.8298403
+Total epoch 98 finished in 997.8294677734375 seconds with TRAINING RMSE loss: 0.8291616745674123
+Doing epoch 99 of 102
+[99,     0] RMSE: 0.8295400
+[99,  1000] RMSE: 0.8294835
+[99,  2000] RMSE: 0.8283943
+[99,  3000] RMSE: 0.8294935
+Total epoch 99 finished in 1004.4387543201447 seconds with TRAINING RMSE loss: 0.829202113782361
+Epoch 99 EVALUATION LOSS: 0.9118394499764018
+Saving model to model_save/model.epoch_99
+Doing epoch 100 of 102
+[100,     0] RMSE: 0.8295263
+[100,  1000] RMSE: 0.8296140
+[100,  2000] RMSE: 0.8299176
+[100,  3000] RMSE: 0.8280523
+Total epoch 100 finished in 993.1595780849457 seconds with TRAINING RMSE loss: 0.8291089414758763
+Doing epoch 101 of 102
+[101,     0] RMSE: 0.8286842
+[101,  1000] RMSE: 0.8286225
+[101,  2000] RMSE: 0.8302734
+[101,  3000] RMSE: 0.8286796
+Total epoch 101 finished in 991.1387922763824 seconds with TRAINING RMSE loss: 0.8290718401986858
+Epoch 101 EVALUATION LOSS: 0.9127132804090746
+Saving model to model_save/model.epoch_101
+Saving model to model_save/model.last
+graph(%x.1 : Float(128, 17768)
+      %w.1 : Float(512, 17768)
+      %w.2 : Float(512, 512)
+      %w.3 : Float(1024, 512)
+      %4 : Float(512)
+      %5 : Float(512)
+      %6 : Float(1024)
+      %w.4 : Float(512, 1024)
+      %w.5 : Float(512, 512)
+      %w : Float(17768, 512)
+      %10 : Float(512)
+      %11 : Float(512)
+      %12 : Float(17768)) {
+  %13 : Float(128, 512) = onnx::Gemm[alpha=1, beta=1, transB=1](%x.1, %w.1, %4), scope: AutoEncoder
+  %14 : Float(128, 512) = onnx::Selu(%13), scope: AutoEncoder
+  %15 : Float(128, 512) = onnx::Gemm[alpha=1, beta=1, transB=1](%14, %w.2, %5), scope: AutoEncoder
+  %16 : Float(128, 512) = onnx::Selu(%15), scope: AutoEncoder
+  %17 : Float(128, 1024) = onnx::Gemm[alpha=1, beta=1, transB=1](%16, %w.3, %6), scope: AutoEncoder
+  %18 : Float(128, 1024) = onnx::Selu(%17), scope: AutoEncoder
+  %19 : Float(128, 1024), %20 : Tensor = onnx::Dropout[ratio=0.8](%18), scope: AutoEncoder/Dropout[drop]
+  %21 : Float(128, 512) = onnx::Gemm[alpha=1, beta=1, transB=1](%19, %w.4, %10), scope: AutoEncoder/Dropout[drop]
+  %22 : Float(128, 512) = onnx::Selu(%21), scope: AutoEncoder
+  %23 : Float(128, 512) = onnx::Gemm[alpha=1, beta=1, transB=1](%22, %w.5, %11), scope: AutoEncoder
+  %24 : Float(128, 512) = onnx::Selu(%23), scope: AutoEncoder
+  %25 : Float(128, 17768) = onnx::Gemm[alpha=1, beta=1, transB=1](%24, %w, %12), scope: AutoEncoder
+  %26 : Float(128, 17768) = onnx::Selu(%25), scope: AutoEncoder
+  return (%26);
+}
+
+ONNX model saved to model_save/model.onnx!

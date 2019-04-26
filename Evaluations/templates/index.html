@@ -1,0 +1,26 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"
+            integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+
+
+<nav>
+    <div class="nav-wrapper blue">
+        <a href="#" class="brand-logo">CSE 573 - Group 5: Movie Recommendation</a>
+    </div>
+</nav>
+
+<form action="" method="post">
+            {{ form.csrf }}
+<div class="input text">
+                {{ form.name.label }} {{ form.name }}</div>
+<div class="input submit">
+<input type="submit" value="Submit"></div>
+</form>
+
+</body>
+</html>
