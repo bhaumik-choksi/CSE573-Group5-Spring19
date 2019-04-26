@@ -4,6 +4,7 @@
 Netflix dataset: [Kaggle](https://www.kaggle.com/laowingkin/netflix-movie-recommendation/data)
 
 ## Instructions
+- Install Python 3 and dependencies using "pip install -r requirements.txt"
 - Download data sources into the data folder (links to alternative sources are in the Data folder)
 - Run Code/Matrix Factorization/train-matrix.py to train the matrix model
 - Run Code/Deep Autoencoder/api.py followed by Code/Deep Autoencoder/demo.py
